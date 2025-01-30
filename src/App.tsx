@@ -1,11 +1,16 @@
-import Input from './components/Input';
+import React, { useState } from "react";
+import Button from "./components/Button";
+import Input from "./components/Input";
 
-function App() {
+const App: React.FC = () => {
+  const [inputValue, setInputValue] = useState<string>("");
+
   return (
-    <div className="p-4">
-      <Input placeholder="Enter text..." text="Submit" onClick={() => alert("Button clicked!")} onChange={(e) => console.log(e.target.value)} />
+    <div>
+      <Input placeholder="Введіть текст..." onChange={(e) => setInputValue(e.target.value)} />
+      <Button text="Натисни мене" onClick={() => alert(`Введений текст: ${inputValue}`)} />
     </div>
   );
 };
 
-export default App
+export default App;
