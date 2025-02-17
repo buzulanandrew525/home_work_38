@@ -7,6 +7,7 @@ import ClickCounter from './components/ClickCounter';
 import ControlledForm from './components/ControlledForm';
 import UncontrolledComponent from './components/UncontrolledComponent';
 import Widget from './components/Widget';
+import DataFetcher from './components/DataFetcher';
 
 const App: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
@@ -31,6 +32,9 @@ const App: React.FC = () => {
       <ControlledForm />
       <UncontrolledComponent />
       <Widget />
+
+      <h2>Дз №41</h2>
+      <DataFetcher />
     </>
   );
 };
